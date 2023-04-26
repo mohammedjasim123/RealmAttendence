@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">RealmAttendence</string>
+    <string name="name">Enter Student Name</string>
+    <string name="id">Enter ID</string>
+</resources>
