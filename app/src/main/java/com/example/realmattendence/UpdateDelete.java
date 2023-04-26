@@ -35,6 +35,9 @@ public class UpdateDelete extends AppCompatActivity {
         Absent = findViewById(R.id.absent);
         Update = findViewById(R.id.update);
 
+        int button = radioGroup.getCheckedRadioButtonId();
+        Present = findViewById(button);
+
         Update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,8 +72,7 @@ public class UpdateDelete extends AppCompatActivity {
     }
 
     private void update(DataModel dataModel) {
-        int button = radioGroup.getCheckedRadioButtonId();
-        Present = findViewById(button);
+
         String Status = Present.getText().toString();
 
         realm.executeTransaction(new Realm.Transaction() {
